@@ -1,7 +1,5 @@
-install.packages("ggformula")
-install.packages("mosaic")
-install.packages("ggplot2")
-install.packages("supernova")
+# Install and load the required packages
+install.packages(c("ggformula", "mosaic", "ggplot2", "supernova"))
 library(ggformula)
 library(mosaic)
 library(ggplot2)
