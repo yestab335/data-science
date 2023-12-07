@@ -22,4 +22,8 @@ gf_histogram( ~ strength, data = passwords) %>%
 strenths.filtered <- filter(passwords, strength %in% c(1:10))
 
 gf_bar(~ category, data = strenths.filtered) %>%
-  gf_facet_grid(strength ~ .)
+  gf_facet_grid(strength ~ .) %>%
+  gf_labs(title = "Figure 3. Password categories and their strengths filtered")
+
+gf_jitter(strength ~ category, data = strenths.filtered) %>%
+  gf_labs(title = "Figure 4. Password categories and their strengths filtered")
