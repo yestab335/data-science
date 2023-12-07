@@ -1,0 +1,2 @@
+# GLM MODEL:
+#   Yi = om
