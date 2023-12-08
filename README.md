@@ -5,7 +5,7 @@ Welcome to the Data Science Reports repository! This collection serves as a comp
 
 ### Freshman Year
 1. Project: passwords
-  * Description: placeholder
+  * Description: What makes a password strong? Is it the amount of characters it contains? Or perhaps a category it is apart of? In this project, I endevor into the inteicacies of what makes a password strong or weak.
   * Files:
     * `main.R`: The main project file used for importing the dataset and previewing before analysis.
     * `variation.R`: The project file used to explore the variation within the given dataset.
@@ -13,18 +13,17 @@ Welcome to the Data Science Reports repository! This collection serves as a comp
     * `passwords.Rproj`: RStudio project configuation to replicate the project on your own machine.
     * `passwords.csv`: The main dataset used in the project.
     * `passwordStrengths.csv`: Second dataset used in the project to compare with the main dataset.
+    * `passwords_analysis.ipynb`: Jupyter Notebook containing the analysis code.
     <!-- * `passwords_analysis.ipynb`: Jupyter Notebook containing the analysis code.
     * `data/`: Directory containing relevant datasets
     * `results/`: Directory with the output and visualizations generated. -->
 
 2. Project: StudentSurvey
-  * Description: placeholder
+  * Description: Data from a survey of students in introductory statistics courses
   * Files:
     * `main.R`: The main project file used for importing the dataset and analysis.
     * `StudentSurvey.Rproj`: RStudio project configuation to replicate the project on your own machine.
-    <!-- * `StudentSurvey_analysis.ipynb`: pl
-    * `data/`: Folder housing the datasets utilizing in the analysis.
-    * `results/`: Folder storing the project's outcomes, including visualizations and conclusions. -->
+    * `StudentSurvey_analysis.ipynb`: Jupyter Notebook containing the analysis code.
 
 ## Usage
 Feel free to explore each project folder for more details on the analyses performed, methodologies employed, and conclusions drawn. The code is provided in Jupyter Notebook format, making it easy to replicate and build upon the analyses.
