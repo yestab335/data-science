@@ -6,9 +6,6 @@
 empty_linearModel <- lm(strength ~ NULL, data = passwords.filtered)
 empty_linearModel
 
-gf_point(strength ~ category, data = passwords.filtered) %>%
-  gf_lm()
-
 # Regression model
 passwords_model <- lm(strength ~ category, data = passwords.filtered)
 passwords_model
