@@ -1,9 +1,10 @@
 # Install and load the required packages
-install.packages(c("ggformula", "mosaic", "ggplot2", "supernova"))
+install.packages(c("ggformula", "mosaic", "ggplot2", "supernova", "coursekata"))
 library(ggformula)
 library(mosaic)
 library(ggplot2)
 library(supernova)
+library(coursekata)
 
 # View the structure of the passwords data frame
 str(passwords)
