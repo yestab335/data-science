@@ -24,6 +24,7 @@ Welcome to the Data Science Reports repository! This collection serves as a comp
     * `main.R`: The main project file used for importing the dataset and analysis.
     * `StudentSurvey.Rproj`: RStudio project configuation to replicate the project on your own machine.
     * `StudentSurvey_analysis.ipynb`: Jupyter Notebook containing the analysis code.
+    * `StudentSurvey_analysis.pdf`: PDF version of the Jupyter Notebook containing the analysis code.
 
 ## Usage
 Feel free to explore each project folder for more details on the analyses performed, methodologies employed, and conclusions drawn. The code is provided in Jupyter Notebook format, making it easy to replicate and build upon the analyses.
