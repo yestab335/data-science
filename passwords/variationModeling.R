@@ -1,6 +1,6 @@
 # GLM MODEL:
 #   Y_i = b_0 + b_1(X_i) + e_i
-#   Bad_Password_i = B_0 + b_1 (Category_i) + e_i
+#   Bad_Password_i = B_0 + b_1 (category_i) + e_i
 
 # Empty linear model
 empty_linearModel <- lm(strength ~ NULL, data = passwords.filtered)
