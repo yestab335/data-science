@@ -31,3 +31,13 @@ supernova(empty_linearModel)
 
 # More details within the table itself
 supernova(passwords_model)
+
+# Randomness Exploration
+sDofB1 <- do(1000) * b1(shuffle(strength) ~ category, data = passwords.filtered)
+
+gf_histogram(~ b1, data = sDofB1) %>%
+  gf_labs(title = "Figure 10. Standard Deviations of B1")
+
+# "Unlikely" distribution of B1
+gf_histogram(~ b1, data = sDofB1, fill = ~middle(b1, 0.95)) %>%
+  gf_labs(title = "Figure 11. Unlikely Standard Deviation Distributions of B1")
