@@ -14,11 +14,20 @@ passwords_model
 passwords.filtered$predictions <- predict(passwords_model)
 head(passwords.filtered)
 
+# Visual representation of both models
 gf_point(strength ~ category, data = passwords.filtered) %>%
-  gf_lm()
+  gf_model(passwords_model, color = "orange") %>%
+  gf_model(empty_linearModel, color = "blue") %>%
+  gf_labs(title = "Figure 9. Password Modeling with Linear (blue) and Regression (orange) Models")
 
 # Filters all passwords ranked with '2' and subsets into new data frame
 strongPassword <- subset(passwordStrengths, strength == 2)
 
 strongPasswordLinearModel <- lm(strength ~ NULL, data = strongPassword)
 strongPasswordLinearModel
+
+# Anova tables
+supernova(empty_linearModel)
+
+# More details within the table itself
+supernova(passwords_model)
