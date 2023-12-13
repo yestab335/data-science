@@ -6,7 +6,7 @@
 empty_linearModel <- lm(strength ~ NULL, data = passwords.filtered)
 empty_linearModel
 
-# Regression model
+# Fitted model
 passwords_model <- lm(strength ~ category, data = passwords.filtered)
 passwords_model
 
@@ -18,7 +18,7 @@ head(passwords.filtered)
 gf_point(strength ~ category, data = passwords.filtered) %>%
   gf_model(passwords_model, color = "orange") %>%
   gf_model(empty_linearModel, color = "blue") %>%
-  gf_labs(title = "Figure 9. Password Modeling with Linear (blue) and Regression (orange) Models")
+  gf_labs(title = "Figure 9. Password Modeling with Empty (blue) and Fit (orange) Models")
 
 # Filters all passwords ranked with '2' and subsets into new data frame
 strongPassword <- subset(passwordStrengths, strength == 2)
@@ -32,7 +32,7 @@ supernova(empty_linearModel)
 # More details within the table itself
 supernova(passwords_model)
 
-# Randomness Exploration
+# Randomness exploration
 sDofB1 <- do(1000) * b1(shuffle(strength) ~ category, data = passwords.filtered)
 
 gf_histogram(~ b1, data = sDofB1) %>%
