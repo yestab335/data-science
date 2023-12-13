@@ -14,6 +14,7 @@ Welcome to the Data Science Reports repository! This collection serves as a comp
     * `passwords.csv`: The main dataset used in the project.
     * `passwordStrengths.csv`: Second dataset used in the project to compare with the main dataset.
     * `passwords_analysis.ipynb`: Jupyter Notebook containing the analysis code.
+    * `passwords_analysis.pdf`: PDF version of the Kupyter Notebook containing the analysis code.
     <!-- * `passwords_analysis.ipynb`: Jupyter Notebook containing the analysis code.
     * `data/`: Directory containing relevant datasets
     * `results/`: Directory with the output and visualizations generated. -->
