@@ -1,0 +1,10 @@
+matplotlib
+
+# Natural Language Toolkit
+nltk
+
+pandas
+plotly
+scikit-learn
+seaborn
+yapf
