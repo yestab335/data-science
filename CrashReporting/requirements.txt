@@ -1,0 +1,9 @@
+pandas
+ipykernel
+ipython
+jupyter-lsp
+notebook
+setuptools
+sniffio
+matplotlib
+numpy
