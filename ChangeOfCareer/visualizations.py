@@ -24,7 +24,6 @@ def scatter():
 
 def density():
   fig, ax = plt.subplots(1, 2, figsize=(12, 5))
-  global data
 
   # Density plot of Years of Experience distribution
   sns.kdeplot(data[data['Likely to Change Occupation'] == 'Yes']['Years of Experience'], fill=True, label='Yes', ax=ax[0])
@@ -40,8 +39,17 @@ def density():
   plt.show()
 
 def histogram():
-  global data
-
   plt.hist(data['Likely to Change Occupation'])
   plt.tight_layout()
+  plt.show()
+
+def pie_chart(target_counts):
+  plt.figure(figsize=(8, 8))
+  plt.pie(target_counts, labels=target_counts.index, autopct='%1.1f%%')
+  plt.title('Distribution of Likely to Change Occupation')
+  plt.axis('equal')
+  plt.show()
+
+def pairplot():
+  sns.pairplot(data, vars=['Years of Experience', 'Job Satisfaction', 'Work-Life Balance', 'Job Opportunities', 'Salary', 'Job Security', 'Career Change Interest', 'Skills Gap', 'Mentorship Available', 'Career Change Events'], height=4)
   plt.show()
