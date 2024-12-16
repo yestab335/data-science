@@ -2,8 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn import tree
 from sklearn.tree import plot_tree
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, balanced_accuracy_score
 from sklearn.model_selection import train_test_split, GridSearchCV, KFold
+from confint import classification_confint
+import plotly.graph_objects as go
 
 data = pd.read_csv('career_change_prediction_dataset.csv')
 data = data.drop(['Age', 'Gender', 'Certifications', 'Freelancing Experience', 'Geographic Mobility', 'Professional Networks', 'Technology Adoption'], axis=1)
@@ -144,3 +146,21 @@ def cross_validation():
   pred_test = grid.best_estimator_.predict(x_test)
 
   print('Accuracy of optimal model: {:3.2f}'.format(accuracy_score(y_test, pred_test)))
+
+  # Calculate the accuracy of the mode
+  acc = grid.best_score_
+  observations = x_test.shape[0]
+
+  # 95% confidence interval
+  lb, ub = classification_confint(acc, observations)
+
+  print('Accuracy: {:3.2f} ({:3.2f}, {:3.2f})'.format(acc, lb, ub))
+
+def model_metrics(y_true, y_predict):
+  accuracy = accuracy_score(y_true, y_predict)
+  precision = precision_score(y_true, y_predict, average='micro')
+  recall = recall_score(y_true, y_predict, average='micro')
+  f1 = f1_score(y_true, y_predict, average='micro')
+  balanced_accuracy = balanced_accuracy_score(y_true, y_predict)
+
+  return accuracy, precision, recall, f1, balanced_accuracy
