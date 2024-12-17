@@ -7,4 +7,5 @@ pandas
 plotly
 scikit-learn
 seaborn
+shap
 yapf
